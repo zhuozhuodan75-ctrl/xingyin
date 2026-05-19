@@ -1,0 +1,8 @@
+node_modules/
+dist/
+unpackage/
+.temp/
+.hbuilderx/
+*.log
+.DS_Store
+project.private.config.json

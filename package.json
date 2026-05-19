@@ -1,0 +1,22 @@
+{
+  "name": "xiangyin-app",
+  "version": "1.0.0",
+  "description": "响音APP - 音乐社区",
+  "main": "src/main.js",
+  "scripts": {
+    "dev:h5": "uni -p h5 --open",
+    "build:h5": "uni build -p h5",
+    "preview:h5": "uni build -p h5 && npx --yes serve dist/build/h5 -l 5190"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "^3.0.0-alpha-5000820260420001",
+    "@supabase/supabase-js": "^2.104.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-5000820260420001",
+    "sass": "^1.89.0",
+    "vite": "^5.0.0"
+  }
+}
