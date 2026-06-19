@@ -1,0 +1,276 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 隐藏开发工具注入的源码定位标记，避免出现「AI生成」等标签 */
+[code-path]::before,
+[code-path]::after {
+  display: none !important;
+  content: none !important;
+}
+
+@layer base {
+  :root {
+    --background: 43 38% 94%;
+    --foreground: 0 0% 24%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 24%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 24%;
+    --primary: 97 55% 20%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 350 58% 34%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 43 30% 88%;
+    --muted-foreground: 0 0% 62%;
+    --accent: 27 80% 52%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 20% 83%;
+    --input: 40 20% 83%;
+    --ring: 97 55% 20%;
+    --radius: 0.75rem;
+
+    --color-bg: #F5F1E8;
+    --color-text: #3E3E3E;
+    --color-text-muted: #9E9E9E;
+    --color-primary: #2D5016;
+    --color-secondary: #8B2635;
+    --color-accent: #E67E22;
+    --color-surface: #FFFFFF;
+    --color-surface-soft: rgba(255, 255, 255, 0.6);
+    --color-muted: #F5F1E8;
+    --color-text-soft: rgba(62, 62, 62, 0.8);
+    --color-border: #E0D8C8;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 88%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 88%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 55%;
+    --border: 0 0% 18%;
+
+    --color-bg: #0f0f0f;
+    --color-text: #e0e0e0;
+    --color-text-muted: #8a8a8a;
+    --color-text-soft: #b5b5b5;
+    --color-surface: #1a1a1a;
+    --color-surface-soft: #141414;
+    --color-border: #2e2e2e;
+    --color-muted: #222222;
+  }
+
+  .dark body {
+    background: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    overscroll-behavior-y: none;
+    touch-action: manipulation;
+  }
+}
+
+@layer components {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .card-shadow {
+    box-shadow: 0 2px 12px rgba(45, 80, 22, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-shadow-lg {
+    box-shadow: 0 8px 32px rgba(45, 80, 22, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .glass-nav {
+    background: rgba(245, 241, 232, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .theme-bg { background-color: var(--color-bg); }
+  .theme-surface { background-color: var(--color-surface); }
+  .theme-surface-soft { background-color: var(--color-surface-soft); }
+  .theme-muted { background-color: var(--color-muted); }
+  .theme-text { color: var(--color-text); }
+  .theme-text-muted { color: var(--color-text-muted); }
+  .theme-text-soft { color: var(--color-text-soft); }
+  .theme-border { border-color: var(--color-border); }
+
+  #app-shell[data-theme="dark"] {
+    background-color: #0f0f0f !important;
+    filter: brightness(0.9);
+  }
+
+  #app-shell[data-theme="dark"] .glass-nav {
+    background: rgba(15, 15, 15, 0.94);
+  }
+
+  #app-shell[data-theme="dark"] .card-shadow {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45), 0 1px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  #app-shell[data-theme="dark"] .bg-\[\#F5F1E8\],
+  #app-shell[data-theme="dark"] .bg-\[\#EDEDED\] {
+    background-color: #0f0f0f !important;
+  }
+
+  #app-shell[data-theme="dark"] .bg-white {
+    background-color: #1a1a1a !important;
+  }
+
+  #app-shell[data-theme="dark"] .bg-white\/60 {
+    background-color: rgba(26, 26, 26, 0.6) !important;
+  }
+
+  #app-shell[data-theme="dark"] .text-\[\#3E3E3E\] {
+    color: #e0e0e0 !important;
+  }
+
+  #app-shell[data-theme="dark"] .text-\[\#9E9E9E\] {
+    color: #8a8a8a !important;
+  }
+
+  #app-shell[data-theme="dark"] .text-\[\#191919\] {
+    color: #e8e8e8 !important;
+  }
+
+  #app-shell[data-theme="dark"] .border-\[\#E0D8C8\],
+  #app-shell[data-theme="dark"] .border-\[\#F5F1E8\],
+  #app-shell[data-theme="dark"] .border-\[\#F0F0F0\],
+  #app-shell[data-theme="dark"] .border-\[\#E5E5E5\] {
+    border-color: #2a2a2a !important;
+  }
+
+  .waveform-bar {
+    animation: waveform 1.2s ease-in-out infinite;
+  }
+
+  .waveform-bar:nth-child(2) { animation-delay: 0.1s; }
+  .waveform-bar:nth-child(3) { animation-delay: 0.2s; }
+  .waveform-bar:nth-child(4) { animation-delay: 0.3s; }
+  .waveform-bar:nth-child(5) { animation-delay: 0.15s; }
+  .waveform-bar:nth-child(6) { animation-delay: 0.25s; }
+  .waveform-bar:nth-child(7) { animation-delay: 0.05s; }
+  .waveform-bar:nth-child(8) { animation-delay: 0.35s; }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes waveform {
+  0%, 100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-60px) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-8px) translateX(4px);
+  }
+  50% {
+    transform: translateY(-4px) translateX(-2px);
+  }
+  75% {
+    transform: translateY(-10px) translateX(3px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease forwards;
+}
+
+.pulse-ring {
+  animation: pulse-ring 1.5s ease-out infinite;
+}

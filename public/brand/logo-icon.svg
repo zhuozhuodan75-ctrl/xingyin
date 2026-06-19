@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="乡音">
+  <defs>
+    <radialGradient id="b1" cx="35%" cy="32%" r="65%"><stop offset="0%" stop-color="#2D5016"/><stop offset="55%" stop-color="#1a3310"/><stop offset="100%" stop-color="#0f1f0a"/></radialGradient>
+    <radialGradient id="b2" cx="35%" cy="32%" r="65%"><stop offset="0%" stop-color="#7CB356"/><stop offset="55%" stop-color="#4A7C32"/><stop offset="100%" stop-color="#2D5016"/></radialGradient>
+    <radialGradient id="b3" cx="35%" cy="32%" r="65%"><stop offset="0%" stop-color="#C5E8A8"/><stop offset="55%" stop-color="#7CB356"/><stop offset="100%" stop-color="#4A7C32"/></radialGradient>
+    <radialGradient id="b4" cx="35%" cy="32%" r="65%"><stop offset="0%" stop-color="#D4F0B8"/><stop offset="55%" stop-color="#A8D88A"/><stop offset="100%" stop-color="#7CB356"/></radialGradient>
+    <radialGradient id="b5" cx="35%" cy="32%" r="65%"><stop offset="0%" stop-color="#F5B041"/><stop offset="55%" stop-color="#E67E22"/><stop offset="100%" stop-color="#C0651A"/></radialGradient>
+  </defs>
+  <circle cx="38" cy="58" r="26" fill="url(#b1)"/>
+  <ellipse cx="28" cy="48" rx="6" ry="4" fill="#fff" opacity="0.2"/>
+  <circle cx="62" cy="44" r="20" fill="url(#b2)"/>
+  <ellipse cx="54" cy="36" rx="5" ry="3" fill="#fff" opacity="0.28"/>
+  <text x="62" y="48" text-anchor="middle" fill="#fff" font-size="11" font-family="Noto Serif SC, serif" font-weight="700">乡</text>
+  <circle cx="72" cy="68" r="13" fill="url(#b3)"/>
+  <circle cx="48" cy="72" r="9" fill="url(#b4)"/>
+  <circle cx="78" cy="32" r="7" fill="url(#b5)"/>
+</svg>
