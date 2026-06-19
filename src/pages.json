@@ -1,0 +1,89 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "乡音",
+        "navigationBarBackgroundColor": "#F5F1E8",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/comment/comment",
+      "style": {
+        "navigationBarTitleText": "评论",
+        "navigationBarBackgroundColor": "#F5F1E8",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/create/create",
+      "style": {
+        "navigationBarTitleText": "录制乡音",
+        "navigationBarBackgroundColor": "#F5F1E8",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/discover/discover",
+      "style": {
+        "navigationBarTitleText": "发现",
+        "navigationBarBackgroundColor": "#F5F1E8",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationBarBackgroundColor": "#F5F1E8",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/card/card",
+      "style": {
+        "navigationBarTitleText": "乡音宝藏卡",
+        "navigationBarBackgroundColor": "#F5F1E8",
+        "navigationBarTextStyle": "black"
+      }
+    }
+  ],
+  "globalStyle": {
+    "backgroundColor": "#F5F1E8",
+    "backgroundTextStyle": "dark",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#9E9E9E",
+    "selectedColor": "#2D5016",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "static/tabbar/discover.png",
+        "selectedIconPath": "static/tabbar/discover-active.png"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "text": "录制",
+        "iconPath": "static/tabbar/record.png",
+        "selectedIconPath": "static/tabbar/record-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "static/tabbar/profile.png",
+        "selectedIconPath": "static/tabbar/profile-active.png"
+      }
+    ]
+  }
+}
